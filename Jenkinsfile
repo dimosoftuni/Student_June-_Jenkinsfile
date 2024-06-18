@@ -16,10 +16,13 @@ pipeline{
                 bat 'npm test'
             }
          }
-        stage("Deploy"){
-            steps{
-                echo 'Deploying'
+        stage('Deploy') {
+            steps {
+                script {
+                    input message: 'Approve deployment?', ok: 'Deploy'
+                    echo 'Deploying'
+                }
             }
-         }
+        }
     }
 }
