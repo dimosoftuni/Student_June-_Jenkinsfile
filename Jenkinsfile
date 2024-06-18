@@ -6,5 +6,10 @@ pipeline{
                 bat 'npm install'
             }
          }
+            stage("NPM Audit"){
+            steps{
+                bat 'npm audit'
+            }
+         }
     }
 }
