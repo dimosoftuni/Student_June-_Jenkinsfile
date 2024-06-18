@@ -19,7 +19,7 @@ pipeline{
         stage('Deploy') {
             steps {
                 script {
-                    input message: 'Approve deployment?', ok: 'Deploy'
+                    input message: 'Approve deployment?', ok: 'Deploy To Production'
                     echo 'Deploying'
                 }
             }
